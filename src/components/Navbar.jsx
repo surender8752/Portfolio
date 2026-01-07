@@ -47,7 +47,7 @@ const Navbar = () => {
           onClick={() => scrollToSection("home")}
           className="cursor-pointer"
         >
-          <Logo />
+          <Logo/>
         </div>
 
         {/* DESKTOP MENU */}
