@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Logo from "./Logo";
+import Logo from "./Logo"
 
 const sections = [
   { id: "home", label: "Home" },
