@@ -39,20 +39,40 @@ const Contact = () => {
 
   return (
     <Reveal>
-      <section id="contact" className="bg-black py-24">
-        <div className="max-w-xl mx-auto px-6">
-          <h2 className="text-4xl text-white font-bold text-center mb-10">
+      <section
+        id="contact"
+        className="bg-black
+                   py-16 sm:py-20 md:py-24"
+      >
+        <div className="max-w-xl mx-auto px-4 sm:px-6">
+          
+          {/* Heading */}
+          <h2
+            className="
+              text-3xl sm:text-4xl
+              text-white font-bold
+              text-center mb-8 sm:mb-10
+            "
+          >
             Contact Me
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+            
             <input
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="Your Name"
               required
-              className="w-full p-3 rounded bg-[#141414] text-white"
+              className="
+                w-full p-3 sm:p-4
+                text-sm sm:text-base
+                rounded-lg
+                bg-[#141414] text-white
+                focus:outline-none focus:ring-2 focus:ring-orange-500
+              "
             />
 
             <input
@@ -62,7 +82,13 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="Your Email"
               required
-              className="w-full p-3 rounded bg-[#141414] text-white"
+              className="
+                w-full p-3 sm:p-4
+                text-sm sm:text-base
+                rounded-lg
+                bg-[#141414] text-white
+                focus:outline-none focus:ring-2 focus:ring-orange-500
+              "
             />
 
             <textarea
@@ -72,18 +98,30 @@ const Contact = () => {
               placeholder="Your Message"
               rows="5"
               required
-              className="w-full p-3 rounded bg-[#141414] text-white"
+              className="
+                w-full p-3 sm:p-4
+                text-sm sm:text-base
+                rounded-lg
+                bg-[#141414] text-white
+                focus:outline-none focus:ring-2 focus:ring-orange-500
+              "
             />
 
             <button
               type="submit"
-              className="w-full bg-orange-500 py-3 rounded text-white hover:scale-105 transition"
+              className="
+                w-full bg-orange-500
+                py-3 sm:py-4
+                text-sm sm:text-base
+                rounded-xl text-white
+                hover:scale-105 transition
+              "
             >
               Send Message
             </button>
 
             {status && (
-              <p className="text-center text-gray-400 mt-2">
+              <p className="text-center text-sm sm:text-base text-gray-400 mt-2">
                 {status}
               </p>
             )}

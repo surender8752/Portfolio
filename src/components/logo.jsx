@@ -23,7 +23,7 @@ const Logo = () => {
 
       {/* Name */}
       <span className="text-white font-semibold tracking-wide">
-        Surendra
+        Surender
       </span>
     </motion.div>
   );

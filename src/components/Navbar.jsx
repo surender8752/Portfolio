@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Logo from "./logo";
+import Logo from "./Logo";
 
 const sections = [
   { id: "home", label: "Home" },
@@ -28,7 +28,7 @@ const Navbar = () => {
       sections.forEach((s) => {
         const el = document.getElementById(s.id);
         if (el) {
-          const top = el.offsetTop - 120; // navbar offset
+          const top = el.offsetTop - 100;
           if (window.scrollY >= top) current = s.id;
         }
       });
@@ -39,14 +39,18 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-black fixed top-0 w-full z-50 border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-      {/* //Logo */}
-      <Logo/>
+    <nav className="fixed top-0 w-full bg-black z-50 border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        
+        {/* LOGO */}
+        <div
+          onClick={() => scrollToSection("home")}
+          className="cursor-pointer"
+        >
+          <Logo />
+        </div>
 
-       
-
-        {/* Desktop Menu */}
+        {/* DESKTOP MENU */}
         <ul className="hidden md:flex items-center gap-6 text-gray-300">
           {sections.map((s) => (
             <li
@@ -63,45 +67,46 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* DESKTOP CTA */}
         <button
-  onClick={() => scrollToSection("contact")}
-  className="bg-orange-500 px-5 py-2 rounded-xl text-white
-             hover:bg-orange-600 hover:scale-105 transition"
->
-  Let’s Talk
-</button>
+          onClick={() => scrollToSection("contact")}
+          className="hidden md:block bg-orange-500 px-4 py-2 text-sm
+                     rounded-xl text-white hover:scale-105 transition"
+        >
+          Let’s Talk
+        </button>
 
-
-        {/* Mobile Hamburger */}
+        {/* MOBILE HAMBURGER */}
         <button
-          className="md:hidden text-gray-200"
+          aria-label="Toggle menu"
+          className="md:hidden text-white text-2xl"
           onClick={() => setOpen(!open)}
         >
           ☰
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-black border-t border-white/10">
-          <ul className="flex flex-col p-4 gap-4 text-gray-300">
+          <ul className="flex flex-col items-center gap-5 py-6 text-gray-300">
             {sections.map((s) => (
               <li
                 key={s.id}
                 onClick={() => scrollToSection(s.id)}
-                className={`cursor-pointer ${
+                className={`text-lg cursor-pointer ${
                   active === s.id ? "text-orange-500" : ""
                 }`}
               >
                 {s.label}
               </li>
             ))}
+
             <button
               onClick={() => scrollToSection("contact")}
-              className="mt-2 bg-orange-500 px-4 py-2 rounded text-white"
+              className="mt-4 bg-orange-500 px-6 py-2 rounded-xl text-white"
             >
-              Hire Me
+              Let’s Talk
             </button>
           </ul>
         </div>
