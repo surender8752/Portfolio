@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Logo from "./Logo"
+
 
 const sections = [
   { id: "home", label: "Home" },
@@ -42,12 +42,12 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-black z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         
-        {/* LOGO */}
+        
         <div
           onClick={() => scrollToSection("home")}
           className="cursor-pointer"
         >
-          <Logo/>
+          
         </div>
 
         {/* DESKTOP MENU */}
