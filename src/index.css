@@ -1,0 +1,28 @@
+@import "tailwindcss";
+body {
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #f97316; /* orange-500 */
+  outline-offset: 3px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
