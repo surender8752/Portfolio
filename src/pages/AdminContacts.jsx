@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 
+const API_BASE = "https://backendportfolio-self.vercel.app/api";
+
 const AdminContacts = () => {
   const [messages, setMessages] = useState([]);
 
   const fetchMessages = () => {
-    fetch("http://localhost:5000/api/contacts")
+    fetch(`${API_BASE}/contacts`)
       .then((res) => res.json())
       .then((data) => setMessages(data));
   };
@@ -19,7 +21,7 @@ const AdminContacts = () => {
     );
     if (!confirmDelete) return;
 
-    await fetch(`http://localhost:5000/api/contacts/${id}`, {
+    await fetch(`${API_BASE}/contacts/${id}`, {
       method: "DELETE",
     });
 
@@ -27,7 +29,7 @@ const AdminContacts = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-10">
+    <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-10 py-10">
       <h1 className="text-3xl font-bold text-orange-500 mb-8">
         Contact Messages
       </h1>
@@ -35,7 +37,7 @@ const AdminContacts = () => {
       {messages.length === 0 ? (
         <p className="text-gray-400">No messages yet.</p>
       ) : (
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
           {messages.map((msg) => (
             <div
               key={msg._id}

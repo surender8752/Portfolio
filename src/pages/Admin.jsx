@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 
+const API_BASE = "https://backendportfolio-self.vercel.app/api";
+
 const Admin = () => {
   const [title, setTitle] = useState("");
   const [tech, setTech] = useState("");
   const [projects, setProjects] = useState([]);
 
   const fetchProjects = () => {
-    fetch("http://localhost:5000/api/projects")
-      .then(res => res.json())
-      .then(data => setProjects(data));
+    fetch(`${API_BASE}/projects`)
+      .then((res) => res.json())
+      .then((data) => setProjects(data));
   };
 
   useEffect(() => {
@@ -17,31 +19,36 @@ const Admin = () => {
 
   const addProject = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:5000/api/projects", {
+
+    await fetch(`${API_BASE}/projects`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, tech }),
     });
+
     setTitle("");
     setTech("");
     fetchProjects();
   };
 
   const deleteProject = async (id) => {
-    await fetch(`http://localhost:5000/api/projects/${id}`, {
+    await fetch(`${API_BASE}/projects/${id}`, {
       method: "DELETE",
     });
     fetchProjects();
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-10">
+    <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-10 py-10">
       <h1 className="text-3xl font-bold mb-6 text-orange-500">
         Admin Dashboard
       </h1>
 
       {/* ADD PROJECT */}
-      <form onSubmit={addProject} className="mb-10 space-y-4 max-w-md">
+      <form
+        onSubmit={addProject}
+        className="mb-10 space-y-4 max-w-md"
+      >
         <input
           className="w-full p-3 rounded bg-[#141414]"
           placeholder="Project Title"
@@ -49,6 +56,7 @@ const Admin = () => {
           onChange={(e) => setTitle(e.target.value)}
           required
         />
+
         <input
           className="w-full p-3 rounded bg-[#141414]"
           placeholder="Tech Stack"
@@ -56,13 +64,17 @@ const Admin = () => {
           onChange={(e) => setTech(e.target.value)}
           required
         />
-        <button className="bg-orange-500 px-6 py-3 rounded">
+
+        <button
+          type="submit"
+          className="bg-orange-500 px-6 py-3 rounded hover:scale-105 transition"
+        >
           Add Project
         </button>
       </form>
 
       {/* PROJECT LIST */}
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
         {projects.map((p) => (
           <div
             key={p._id}
@@ -70,9 +82,10 @@ const Admin = () => {
           >
             <h3 className="font-semibold">{p.title}</h3>
             <p className="text-gray-400 text-sm">{p.tech}</p>
+
             <button
               onClick={() => deleteProject(p._id)}
-              className="mt-4 text-red-500 text-sm"
+              className="mt-4 text-red-500 text-sm hover:underline"
             >
               Delete
             </button>
