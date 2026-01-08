@@ -6,7 +6,7 @@ const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/projects")
+    fetch("https://backendportfolio-self.vercel.app/api")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
