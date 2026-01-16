@@ -8,7 +8,7 @@ const sections = [
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
-  { id: "portfolio", label: "Portfolio" },
+  { id: "portfolio", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -42,43 +42,43 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full bg-black z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        
-        
+
+
         <div
           onClick={() => scrollToSection("home")}
           className="cursor-pointer"
         >
 
-        <motion.div
-      initial={{ y: 0 }}
-      animate={{ y: [0, -6, 0] }}
-      transition={{
-        duration: 2.5,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-      className="flex items-center gap-2 cursor-pointer select-none"
-    >
-      {/* Logo Icon */}
-      <div
-        className="w-10 h-10 rounded-xl flex items-center justify-center
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [0, -6, 0] }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="flex items-center gap-2 cursor-pointer select-none"
+          >
+            {/* Logo Icon */}
+            <div
+              className="w-10 h-10 rounded-xl flex items-center justify-center
                    bg-gradient-to-br from-orange-500 to-pink-500
                    text-white font-bold text-lg shadow-lg"
-      >
-        SK
-      </div>
+            >
+              SK
+            </div>
 
-      {/* Name */}
-      <span className="text-white font-semibold tracking-wide">
-        Surender
-      </span>
-    </motion.div>
-
-
+            {/* Name */}
+            <span className="text-white font-semibold tracking-wide">
+              Surender
+            </span>
+          </motion.div>
 
 
 
-          
+
+
+
         </div>
 
         {/* DESKTOP MENU */}
@@ -87,11 +87,10 @@ const Navbar = () => {
             <li
               key={s.id}
               onClick={() => scrollToSection(s.id)}
-              className={`cursor-pointer transition ${
-                active === s.id
+              className={`cursor-pointer transition ${active === s.id
                   ? "text-orange-500 border-b-2 border-orange-500"
                   : "hover:text-orange-500"
-              }`}
+                }`}
             >
               {s.label}
             </li>
@@ -125,9 +124,8 @@ const Navbar = () => {
               <li
                 key={s.id}
                 onClick={() => scrollToSection(s.id)}
-                className={`text-lg cursor-pointer ${
-                  active === s.id ? "text-orange-500" : ""
-                }`}
+                className={`text-lg cursor-pointer ${active === s.id ? "text-orange-500" : ""
+                  }`}
               >
                 {s.label}
               </li>
