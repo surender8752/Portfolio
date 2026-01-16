@@ -1,17 +1,17 @@
 import Reveal from "./Reveal";
 
 const skills = [
-  { name: "HTML", level: "95%" },
-  { name: "CSS", level: "90%" },
-  { name: "JavaScript", level: "90%" },
-  { name: "Bootstrap", level: "85%" },
-  { name: "React", level: "90%" },
-  { name: "Node.js", level: "85%" },
-  { name: "Express.js", level: "80%" },
-  { name: "MongoDB", level: "80%" },
-  { name: "Python", level: "75%" },
-  { name: "Git", level: "85%" },
-  { name: "GitHub", level: "85%" },
+  { name: "HTML", level: "75%" },
+  { name: "CSS", level: "75%" },
+  { name: "JavaScript", level: "70%" },
+  { name: "Bootstrap", level: "70%" },
+  { name: "React", level: "75%" },
+  { name: "Node.js", level: "70%" },
+  { name: "Express.js", level: "70%" },
+  { name: "MongoDB", level: "65%" },
+  { name: "Python", level: "65%" },
+  { name: "Git", level: "70%" },
+  { name: "GitHub", level: "75%" },
 ];
 
 const Skills = () => {
@@ -23,7 +23,7 @@ const Skills = () => {
                    py-16 sm:py-20 md:py-24"
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          
+
           {/* Heading */}
           <h2
             className="
@@ -46,7 +46,7 @@ const Skills = () => {
           >
             {skills.map((skill, i) => (
               <div key={i}>
-                
+
                 {/* Skill Header */}
                 <div className="flex justify-between text-white mb-1">
                   <span className="font-medium text-sm sm:text-base">
