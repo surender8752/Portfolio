@@ -11,7 +11,7 @@ const Footer = () => {
         "
       >
         <p>
-          © 2026 <span className="text-white font-semibold">Surendra Kumar</span>.
+          © 2026 <span className="text-white font-semibold">Surender Kumar</span>.
           All Rights Reserved.
         </p>
       </div>

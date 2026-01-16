@@ -101,6 +101,7 @@ const Hero = () => {
             "
           >
             <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="
                 bg-orange-500 px-7 py-3
                 text-sm sm:text-base
@@ -108,11 +109,12 @@ const Hero = () => {
                 hover:scale-105 transition
               "
             >
-              Let’s Talk
+              Let's Talk
             </button>
 
             <a
               href="/resume.pdf"
+              download="Surender_Kumar_Resume.pdf"
               className="
                 border border-orange-500
                 px-7 py-3 text-sm sm:text-base
@@ -149,8 +151,8 @@ const Hero = () => {
 
           {/* Image */}
           <img
-            src="/profile.png.png"
-            alt="Surendra Kumar"
+            src="/profile.png"
+            alt="Surender Kumar"
             className="
               relative w-full rounded-3xl
               border border-orange-500/50
