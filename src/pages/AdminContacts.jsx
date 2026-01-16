@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-const API_BASE = "https://portfolio-backend-8genoqewh-surender-kumars-projects-3bd700bf.vercel.app/";
+import API_BASE_URL from "../config";
 
 const AdminContacts = () => {
   const [messages, setMessages] = useState([]);
@@ -9,7 +8,7 @@ const AdminContacts = () => {
   const token = localStorage.getItem("admin_token");
 
   const fetchMessages = () => {
-    fetch(`${API_BASE}/contacts`, {
+    fetch(`${API_BASE_URL}/contacts`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }
@@ -28,7 +27,7 @@ const AdminContacts = () => {
     );
     if (!confirmDelete) return;
 
-    await fetch(`${API_BASE}/contacts/${id}`, {
+    await fetch(`${API_BASE_URL}/contacts/${id}`, {
       method: "DELETE",
       headers: {
         "Authorization": `Bearer ${token}`

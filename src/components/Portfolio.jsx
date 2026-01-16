@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
+import API_BASE_URL from "../config";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("https://backendportfolio-self.vercel.app/api/projects")
+    fetch(`${API_BASE_URL}/projects`)
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-const API_BASE = "https://backendportfolio-self.vercel.app/api";
+import API_BASE_URL from "../config";
 
 const Admin = () => {
   const [title, setTitle] = useState("");
@@ -11,7 +10,7 @@ const Admin = () => {
   const token = localStorage.getItem("admin_token");
 
   const fetchProjects = () => {
-    fetch(`${API_BASE}/projects`)
+    fetch(`${API_BASE_URL}/projects`)
       .then((res) => res.json())
       .then((data) => setProjects(data));
   };
@@ -23,7 +22,7 @@ const Admin = () => {
   const addProject = async (e) => {
     e.preventDefault();
 
-    await fetch(`${API_BASE}/projects`, {
+    await fetch(`${API_BASE_URL}/projects`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +37,7 @@ const Admin = () => {
   };
 
   const deleteProject = async (id) => {
-    await fetch(`${API_BASE}/projects/${id}`, {
+    await fetch(`${API_BASE_URL}/projects/${id}`, {
       method: "DELETE",
       headers: {
         "Authorization": `Bearer ${token}`

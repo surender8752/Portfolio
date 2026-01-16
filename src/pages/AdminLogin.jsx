@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Reveal from "../components/Reveal";
+import API_BASE_URL from "../config";
 
 const AdminLogin = () => {
     const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ const AdminLogin = () => {
         setError("");
 
         try {
-            const res = await fetch("https://portfolio-backend-8genoqewh-surender-kumars-projects-3bd700bf.vercel.app/", {
+            const res = await fetch(`${API_BASE_URL}/auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
