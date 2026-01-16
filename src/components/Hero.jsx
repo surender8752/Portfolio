@@ -1,10 +1,11 @@
 
 
-import { useRef } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
   const cardRef = useRef(null);
+  const [showResumeMenu, setShowResumeMenu] = useState(false);
 
   const handleMouseMove = (e) => {
     if (window.innerWidth < 1024) return;
@@ -112,19 +113,70 @@ const Hero = () => {
               Let's Talk
             </button>
 
-            <a
-              href="/resume.pdf"
-              download="Surender_Kumar_Resume.pdf"
-              className="
-                border border-orange-500
-                px-7 py-3 text-sm sm:text-base
-                rounded-xl text-orange-500
-                hover:bg-orange-500 hover:text-white
-                transition
-              "
-            >
-              Download CV
-            </a>
+            {/* Download CV Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setShowResumeMenu(!showResumeMenu)}
+                onBlur={() => setTimeout(() => setShowResumeMenu(false), 150)}
+                className="
+                  border border-orange-500
+                  px-7 py-3 text-sm sm:text-base
+                  rounded-xl text-orange-500
+                  hover:bg-orange-500 hover:text-white
+                  transition flex items-center gap-2
+                "
+              >
+                Download CV
+                <svg
+                  className={`w-4 h-4 transition-transform ${showResumeMenu ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <AnimatePresence>
+                {showResumeMenu && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.15 }}
+                    className="
+                      absolute top-full mt-2 left-0
+                      bg-gray-900 border border-orange-500/30
+                      rounded-xl overflow-hidden shadow-lg
+                      min-w-[180px] z-50
+                    "
+                  >
+                    <a
+                      href="/resume.pdf"
+                      download="Surender_Kumar_MERN_Resume.pdf"
+                      className="
+                        block px-4 py-3 text-sm text-gray-300
+                        hover:bg-orange-500/20 hover:text-orange-500
+                        transition border-b border-gray-700
+                      "
+                    >
+                      📄 MERN Stack Resume
+                    </a>
+                    <a
+                      href="/resume_backend.pdf"
+                      download="Surender_Kumar_Backend_Resume.pdf"
+                      className="
+                        block px-4 py-3 text-sm text-gray-300
+                        hover:bg-orange-500/20 hover:text-orange-500
+                        transition
+                      "
+                    >
+                      📄 Backend Resume
+                    </a>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
         </motion.div>
 
