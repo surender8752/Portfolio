@@ -9,7 +9,7 @@ const Education = () => {
                    py-16 sm:py-20 md:py-24"
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          
+
           {/* Heading */}
           <h2
             className="
@@ -30,7 +30,24 @@ const Education = () => {
               pl-4 sm:pl-6
             "
           >
-            {/* MCA */}
+            {/* MERN Course - 2025 */}
+            <div>
+              <h3
+                className="
+                  text-white
+                  text-base sm:text-lg
+                  font-semibold
+                "
+              >
+                MERN Stack Development Course
+              </h3>
+              <p className="text-gray-400 text-sm sm:text-base">
+                Excellence Technology, Hamirpur
+                <span className="text-orange-500"> • 2025</span>
+              </p>
+            </div>
+
+            {/* MCA - 2024 */}
             <div>
               <h3
                 className="
@@ -47,24 +64,7 @@ const Education = () => {
               </p>
             </div>
 
-            {/* BSc Physics */}
-            <div>
-              <h3
-                className="
-                  text-white
-                  text-base sm:text-lg
-                  font-semibold
-                "
-              >
-                Bachelor of Science (B.Sc) in Physics
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base">
-                Himachal Pradesh University
-                <span className="text-orange-500"> • 2020</span>
-              </p>
-            </div>
-
-            {/* BA Sociology */}
+            {/* BA Sociology - 2021 */}
             <div>
               <h3
                 className="
@@ -81,7 +81,7 @@ const Education = () => {
               </p>
             </div>
 
-            {/* MERN Course */}
+            {/* BSc Physics - 2020 */}
             <div>
               <h3
                 className="
@@ -90,11 +90,11 @@ const Education = () => {
                   font-semibold
                 "
               >
-                MERN Stack Development Course
+                Bachelor of Science (B.Sc) in Physics
               </h3>
               <p className="text-gray-400 text-sm sm:text-base">
-                Excellence Technology, Hamirpur
-                <span className="text-orange-500"> • 2025</span>
+                Himachal Pradesh University
+                <span className="text-orange-500"> • 2020</span>
               </p>
             </div>
           </div>
