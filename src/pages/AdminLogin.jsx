@@ -13,7 +13,7 @@ const AdminLogin = () => {
         setError("");
 
         try {
-            const res = await fetch("https://backendportfolio-self.vercel.app/api/auth/login", {
+            const res = await fetch("https://portfolio-backend-8genoqewh-surender-kumars-projects-3bd700bf.vercel.app/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),

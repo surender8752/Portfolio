@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = "https://backendportfolio-self.vercel.app/api";
+const API_BASE = "https://portfolio-backend-8genoqewh-surender-kumars-projects-3bd700bf.vercel.app/";
 
 const AdminContacts = () => {
   const [messages, setMessages] = useState([]);
