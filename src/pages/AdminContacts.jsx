@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const API_BASE = "https://backendportfolio-self.vercel.app/api";
 
 const AdminContacts = () => {
   const [messages, setMessages] = useState([]);
+  const navigate = useNavigate();
+  const token = localStorage.getItem("admin_token");
 
   const fetchMessages = () => {
-    fetch(`${API_BASE}/contacts`)
+    fetch(`${API_BASE}/contacts`, {
+      headers: {
+        "Authorization": `Bearer ${token}`
+      }
+    })
       .then((res) => res.json())
       .then((data) => setMessages(data));
   };
@@ -23,6 +30,9 @@ const AdminContacts = () => {
 
     await fetch(`${API_BASE}/contacts/${id}`, {
       method: "DELETE",
+      headers: {
+        "Authorization": `Bearer ${token}`
+      }
     });
 
     fetchMessages(); // refresh list
@@ -30,9 +40,20 @@ const AdminContacts = () => {
 
   return (
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-10 py-10">
-      <h1 className="text-3xl font-bold text-orange-500 mb-8">
-        Contact Messages
-      </h1>
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold text-orange-500">
+          Contact Messages
+        </h1>
+        <button
+          onClick={() => {
+            localStorage.removeItem("admin_token");
+            navigate("/login");
+          }}
+          className="bg-red-500 px-4 py-2 rounded text-white text-sm hover:bg-red-600 transition"
+        >
+          Logout
+        </button>
+      </div>
 
       {messages.length === 0 ? (
         <p className="text-gray-400">No messages yet.</p>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const API_BASE = "https://backendportfolio-self.vercel.app/api";
 
@@ -6,6 +7,8 @@ const Admin = () => {
   const [title, setTitle] = useState("");
   const [tech, setTech] = useState("");
   const [projects, setProjects] = useState([]);
+  const navigate = useNavigate();
+  const token = localStorage.getItem("admin_token");
 
   const fetchProjects = () => {
     fetch(`${API_BASE}/projects`)
@@ -22,7 +25,10 @@ const Admin = () => {
 
     await fetch(`${API_BASE}/projects`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
       body: JSON.stringify({ title, tech }),
     });
 
@@ -34,15 +40,29 @@ const Admin = () => {
   const deleteProject = async (id) => {
     await fetch(`${API_BASE}/projects/${id}`, {
       method: "DELETE",
+      headers: {
+        "Authorization": `Bearer ${token}`
+      }
     });
     fetchProjects();
   };
 
   return (
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-10 py-10">
-      <h1 className="text-3xl font-bold mb-6 text-orange-500">
-        Admin Dashboard
-      </h1>
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-3xl font-bold text-orange-500">
+          Admin Dashboard
+        </h1>
+        <button
+          onClick={() => {
+            localStorage.removeItem("admin_token");
+            navigate("/login");
+          }}
+          className="bg-red-500 px-4 py-2 rounded text-white text-sm hover:bg-red-600 transition"
+        >
+          Logout
+        </button>
+      </div>
 
       {/* ADD PROJECT */}
       <form
