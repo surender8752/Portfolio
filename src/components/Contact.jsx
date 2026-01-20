@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
+import API_BASE_URL from "../config";
 
-const API_URL = "https://backendportfolio-self.vercel.app/api/contacts";
+const API_URL = `${API_BASE_URL}/contacts`;
 
 const Contact = () => {
   const [form, setForm] = useState({
