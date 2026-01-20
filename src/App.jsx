@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import AdminContacts from "./pages/AdminContacts";
 import AdminLogin from "./pages/AdminLogin";
-import AdminSignup from "./pages/AdminSignup";
 import RequireAuth from "./components/RequireAuth";
 
 
@@ -14,7 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<AdminLogin />} />
-        <Route path="/signup" element={<AdminSignup />} />
+        <Route path="/login" element={<AdminLogin />} />
 
         {/* Protected Routes */}
         <Route element={<RequireAuth />}>
