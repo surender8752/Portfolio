@@ -21,10 +21,6 @@ const Logo = () => {
         SK
       </div>
 
-      {/* Name */}
-      <span className="text-white font-semibold tracking-wide">
-        Surender
-      </span>
     </motion.div>
   );
 };

@@ -68,10 +68,6 @@ const Navbar = () => {
               SK
             </div>
 
-            {/* Name */}
-            <span className="text-white font-semibold tracking-wide">
-              Surender
-            </span>
           </motion.div>
 
 
@@ -88,8 +84,8 @@ const Navbar = () => {
               key={s.id}
               onClick={() => scrollToSection(s.id)}
               className={`cursor-pointer transition ${active === s.id
-                  ? "text-orange-500 border-b-2 border-orange-500"
-                  : "hover:text-orange-500"
+                ? "text-orange-500 border-b-2 border-orange-500"
+                : "hover:text-orange-500"
                 }`}
             >
               {s.label}
