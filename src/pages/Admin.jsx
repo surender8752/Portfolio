@@ -52,15 +52,23 @@ const Admin = () => {
         <h1 className="text-3xl font-bold text-orange-500">
           Admin Dashboard
         </h1>
-        <button
-          onClick={() => {
-            localStorage.removeItem("admin_token");
-            navigate("/login");
-          }}
-          className="bg-red-500 px-4 py-2 rounded text-white text-sm hover:bg-red-600 transition"
-        >
-          Logout
-        </button>
+        <div className="flex gap-4">
+          <button
+            onClick={() => navigate("/admin/profile")}
+            className="bg-orange-500/10 border border-orange-500/30 px-4 py-2 rounded text-orange-500 text-sm hover:bg-orange-500 hover:text-white transition"
+          >
+            Manage Profile
+          </button>
+          <button
+            onClick={() => {
+              localStorage.removeItem("admin_token");
+              navigate("/login");
+            }}
+            className="bg-red-500/10 border border-red-500/30 px-4 py-2 rounded text-red-500 text-sm hover:bg-red-600 hover:text-white transition"
+          >
+            Logout
+          </button>
+        </div>
       </div>
 
       {/* ADD PROJECT */}
