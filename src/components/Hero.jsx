@@ -203,7 +203,7 @@ const Hero = () => {
 
           {/* Image */}
           <img
-            src="/profile.png"
+            src="/hero-profile.jpg"
             alt="Surender Kumar"
             className="
               relative w-full rounded-3xl
