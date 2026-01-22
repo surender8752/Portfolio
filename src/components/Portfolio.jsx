@@ -86,6 +86,50 @@ const Portfolio = () => {
               </p>
             </motion.a>
 
+            {/* Inventory Management System Project */}
+            <motion.a
+              href="https://sk-inventory-frontend.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              viewport={{ once: true }}
+              className="
+                bg-gradient-to-br from-emerald-500/20 to-teal-500/20
+                border border-emerald-500/40
+                rounded-xl
+                p-5 sm:p-6
+                hover:scale-105
+                transition
+                cursor-pointer
+                group
+              "
+            >
+              <div className="flex items-center justify-between mb-2">
+                <span className="bg-emerald-500 text-white text-xs px-2 py-1 rounded-full">
+                  New Project
+                </span>
+                <svg
+                  className="w-5 h-5 text-emerald-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </div>
+              <h3 className="text-white font-semibold text-base sm:text-lg">
+                Inventory Management System
+              </h3>
+              <p className="text-gray-400 text-sm sm:text-base mt-2">
+                React, Node.js, Express, MongoDB, Tailwind CSS
+              </p>
+              <p className="text-emerald-500 text-xs mt-3 group-hover:underline">
+                View Live →
+              </p>
+            </motion.a>
+
             {/* Dynamic Projects from API */}
             {projects.map((p, i) => (
               <motion.div
