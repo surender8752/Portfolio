@@ -154,6 +154,17 @@ const Portfolio = () => {
                 <p className="text-gray-400 text-sm sm:text-base mt-2">
                   {p.tech}
                 </p>
+
+                {p.link && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-orange-500 text-xs mt-3 block hover:underline"
+                  >
+                    View Live →
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>
