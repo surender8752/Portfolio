@@ -29,8 +29,12 @@ const Navbar = () => {
       sections.forEach((s) => {
         const el = document.getElementById(s.id);
         if (el) {
-          const top = el.offsetTop - 100;
-          if (window.scrollY >= top) current = s.id;
+          const rect = el.getBoundingClientRect();
+          // Detect if the section is in view. 
+          // 150px threshold is used so it highlights as the section heads towards the top.
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            current = s.id;
+          }
         }
       });
       setActive(current);
