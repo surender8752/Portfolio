@@ -93,13 +93,16 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* DESKTOP CTA */}
+        {/* DESKTOP CTA - Admin Button */}
         <button
-          onClick={() => scrollToSection("contact")}
-          className="hidden md:block bg-orange-500 px-4 py-2 text-sm
-                     rounded-xl text-white hover:scale-105 transition"
+          onClick={() => window.location.href = "/admin"}
+          className="hidden md:flex items-center gap-2 bg-gradient-to-r from-orange-500 to-pink-500 px-4 py-2 text-sm
+                     rounded-xl text-white hover:scale-105 transition shadow-lg shadow-orange-500/20"
         >
-          Let’s Talk
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+          Admin
         </button>
 
         {/* MOBILE HAMBURGER */}
@@ -128,10 +131,16 @@ const Navbar = () => {
             ))}
 
             <button
-              onClick={() => scrollToSection("contact")}
-              className="mt-4 bg-orange-500 px-6 py-2 rounded-xl text-white"
+              onClick={() => {
+                setOpen(false);
+                window.location.href = "/admin";
+              }}
+              className="mt-4 flex items-center gap-2 bg-gradient-to-r from-orange-500 to-pink-500 px-6 py-2 rounded-xl text-white"
             >
-              Let’s Talk
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              Admin Dashboard
             </button>
           </ul>
         </div>
