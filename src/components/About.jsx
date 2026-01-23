@@ -8,7 +8,7 @@ const About = () => {
         className="bg-[#0f0f0f] py-16 sm:py-20 md:py-24"
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-          
+
           {/* Heading */}
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             About Me
@@ -32,10 +32,18 @@ const About = () => {
             </p>
 
             <p className="mt-4">
+              Recently, I have developed 3 full-stack MERN applications including
+              a <strong className="text-white">Doctor Appointment Booking System</strong>,
+              an <strong className="text-white">Inventory Management System</strong>, and a
+              <strong className="text-white"> Grocery Management System</strong> with advanced
+              features like Firebase Cloud Messaging (FCM) for push notifications,
+              JWT authentication, and responsive design using Tailwind CSS.
+            </p>
+
+            <p className="mt-4">
               Currently, I am undergoing professional MERN Stack training at
               Excellence Technology, Hamirpur, where I am gaining hands-on
-              experience by developing practical projects such as portfolio
-              websites, admin dashboards, and CRUD-based applications. I am
+              experience by developing practical projects. I am
               always eager to learn new technologies, improve my skills, and
               grow as a full-stack developer.
             </p>
