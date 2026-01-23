@@ -167,7 +167,7 @@ const Portfolio = () => {
                 Grocery Management System
               </h3>
               <p className="text-gray-400 text-sm sm:text-base mt-2">
-                React, Node.js, Express, MongoDB, Tailwind CSS
+                React, Firebase (FCM), JWT, MongoDB, Express, Node.js, CSS
               </p>
               <p className="text-purple-500 text-xs mt-3 group-hover:underline">
                 View Live →
