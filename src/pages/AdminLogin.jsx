@@ -79,6 +79,14 @@ const AdminLogin = () => {
                         </button>
                     </form>
 
+                    {/* Back to Home Button */}
+                    <Link
+                        to="/"
+                        className="block text-center mt-6 text-gray-400 hover:text-orange-500 transition text-sm"
+                    >
+                        ← Back to Home
+                    </Link>
+
                 </div>
             </div>
         </Reveal>
