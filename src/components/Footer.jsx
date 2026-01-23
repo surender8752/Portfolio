@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Social Links */}
         <div className="flex justify-center gap-6 mb-6">
           <a
-            href="https://github.com/surenderkumar"
+            href="https://github.com/surender8752"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-orange-500 transition"
@@ -22,7 +22,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            href="https://linkedin.com/in/surenderkumar"
+            href="https://www.linkedin.com/in/surender-kumar-2399b7275"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-orange-500 transition"
@@ -33,7 +33,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            href="mailto:surenderkumar@example.com"
+            href="mailto:surenderthakur40437@gmail.com"
             className="hover:text-orange-500 transition"
             aria-label="Email"
           >
