@@ -164,15 +164,26 @@ const Hero = () => {
                       Resume
                     </a>
                     <a
-                      href="/resume_backend.pdf"
+                      href="/surender_backend_resume.pdf"
                       download="Surender_Kumar_Backend_Resume.pdf"
+                      className="
+                        block px-4 py-3 text-sm text-gray-300
+                        hover:bg-orange-500/20 hover:text-orange-500
+                        transition border-b border-gray-700
+                      "
+                    >
+                      📄 Backend Resume
+                    </a>
+                    <a
+                      href="/surender_fullstack_resume.pdf"
+                      download="Surender_Kumar_FullStack_Resume.pdf"
                       className="
                         block px-4 py-3 text-sm text-gray-300
                         hover:bg-orange-500/20 hover:text-orange-500
                         transition
                       "
                     >
-                      📄 Backend Resume
+                      📄 Full Stack Resume
                     </a>
                   </motion.div>
                 )}

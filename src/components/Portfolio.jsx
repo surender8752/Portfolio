@@ -43,10 +43,7 @@ const Portfolio = () => {
             "
           >
             {/* Featured Project - Doctor Appointment */}
-            <motion.a
-              href="https://sk-frontend-healthcare.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0 }}
@@ -56,41 +53,64 @@ const Portfolio = () => {
                 border border-orange-500/40
                 rounded-xl
                 p-5 sm:p-6
-                hover:scale-105
+                hover:scale-[1.02]
                 transition
-                cursor-pointer
                 group
+                flex flex-col justify-between
               "
             >
-              <div className="flex items-center justify-between mb-2">
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                  Featured
-                </span>
-                <svg
-                  className="w-5 h-5 text-orange-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
+                    Featured
+                  </span>
+                  <svg
+                    className="w-5 h-5 text-orange-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </div>
+                <h3 className="text-white font-semibold text-base sm:text-lg">
+                  Doctor Appointment Booking
+                </h3>
+                <p className="text-gray-400 text-sm sm:text-base mt-2">
+                  React, Node.js, Express, MongoDB, Tailwind CSS
+                </p>
               </div>
-              <h3 className="text-white font-semibold text-base sm:text-lg">
-                Doctor Appointment Booking
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base mt-2">
-                React, Node.js, Express, MongoDB, Tailwind CSS
-              </p>
-              <p className="text-orange-500 text-xs mt-3 group-hover:underline">
-                View Live →
-              </p>
-            </motion.a>
-            
+
+              <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-white/10">
+                <a
+                  href="https://sk-frontend-healthcare.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-500 text-xs font-medium hover:underline flex items-center gap-1"
+                >
+                  Live Demo <span className="text-sm">↗</span>
+                </a>
+                <a
+                  href="https://github.com/surender8752/sk-frontend-healthcare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 text-xs font-medium hover:text-white transition flex items-center gap-1"
+                >
+                  Frontend <span className="text-sm">↗</span>
+                </a>
+                <a
+                  href="https://github.com/surender8752/sk-healthcare-backend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 text-xs font-medium hover:text-white transition flex items-center gap-1"
+                >
+                  Backend <span className="text-sm">↗</span>
+                </a>
+              </div>
+            </motion.div>
+
             {/* Grocery Management System Project */}
-            <motion.a
-              href="https://grocery-frontend-orcin.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -100,35 +120,61 @@ const Portfolio = () => {
                 border border-purple-500/40
                 rounded-xl
                 p-5 sm:p-6
-                hover:scale-105
+                hover:scale-[1.02]
                 transition
-                cursor-pointer
                 group
+                flex flex-col justify-between
               "
             >
-              <div className="flex items-center justify-between mb-2">
-                <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
-                  Latest
-                </span>
-                <svg
-                  className="w-5 h-5 text-purple-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
+                    Latest
+                  </span>
+                  <svg
+                    className="w-5 h-5 text-purple-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </div>
+                <h3 className="text-white font-semibold text-base sm:text-lg">
+                  Grocery Management System
+                </h3>
+                <p className="text-gray-400 text-sm sm:text-base mt-2">
+                  React, Firebase (FCM), JWT, MongoDB, Express, Node.js, CSS
+                </p>
               </div>
-              <h3 className="text-white font-semibold text-base sm:text-lg">
-                Grocery Management System
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base mt-2">
-                React, Firebase (FCM), JWT, MongoDB, Express, Node.js, CSS
-              </p>
-              <p className="text-purple-500 text-xs mt-3 group-hover:underline">
-                View Live →
-              </p>
-            </motion.a>
+
+              <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-white/10">
+                <a
+                  href="https://grocery-frontend-orcin.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-500 text-xs font-medium hover:underline flex items-center gap-1"
+                >
+                  Live Demo <span className="text-sm">↗</span>
+                </a>
+                <a
+                  href="https://github.com/surender8752/grocery-frontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 text-xs font-medium hover:text-white transition flex items-center gap-1"
+                >
+                  Frontend <span className="text-sm">↗</span>
+                </a>
+                <a
+                  href="https://github.com/surender8752/grocery-backend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 text-xs font-medium hover:text-white transition flex items-center gap-1"
+                >
+                  Backend <span className="text-sm">↗</span>
+                </a>
+              </div>
+            </motion.div>
 
             {/* Dynamic Projects from API */}
             {projects.map((p, i) => (
