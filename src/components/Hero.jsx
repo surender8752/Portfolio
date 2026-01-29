@@ -152,7 +152,7 @@ const Hero = () => {
                     "
                   >
                     <a
-                      href="/resume.pdf"
+                      href="/sk_fronten_new.pdf"
                       download="Surender_Kumar_MERN_Resume.pdf"
                       className="
                         block px-4 py-3 text-sm text-gray-300
