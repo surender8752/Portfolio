@@ -153,14 +153,15 @@ const Hero = () => {
                   >
                     <a
                       href="/sk_fronten_new.pdf"
-                      download="Surender_Kumar_MERN_Resume.pdf"
+                      download="sk_fronten_new.pdf"
                       className="
                         block px-4 py-3 text-sm text-gray-300
                         hover:bg-orange-500/20 hover:text-orange-500
                         transition border-b border-gray-700
                       "
                     >
-                      📄 MERN Stack Resume
+                      📄 Frontend
+                      Resume
                     </a>
                     <a
                       href="/resume_backend.pdf"
