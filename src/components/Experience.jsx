@@ -33,7 +33,7 @@ const Experience = () => {
             {/* Training */}
             <div>
               <span className="text-orange-500 text-xs sm:text-sm font-semibold">
-                2024 – Present
+                2026 – Present
               </span>
 
               <h3
