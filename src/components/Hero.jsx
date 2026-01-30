@@ -42,9 +42,9 @@ const Hero = () => {
     <section
       id="home"
       className="bg-black text-white
-                 pt-20 pb-20
-                 sm:pt-24 sm:pb-24
-                 md:pt-28 md:pb-28"
+                 pt-16 pb-20
+                 sm:pt-20 sm:pb-24
+                 md:pt-24 md:pb-28"
     >
       <div
         className="
