@@ -53,10 +53,14 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <p className="text-center text-xs sm:text-sm">
-          © 2026 <span className="text-white font-semibold">Surender Kumar</span>.
-          All Rights Reserved.
-        </p>
+        <div className="text-center text-xs sm:text-sm">
+          <p className="mb-1">
+            © 2026 <span className="text-white font-semibold">SK™</span>. All Rights Reserved.
+          </p>
+          <p>
+            Designed & Developed by <span className="text-white font-semibold">SK™</span> with <span className="text-red-500">❤️</span>
+          </p>
+        </div>
       </div>
     </footer>
   );
