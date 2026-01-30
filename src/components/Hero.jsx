@@ -148,7 +148,7 @@ const Hero = () => {
                       absolute top-full mt-2 left-0
                       bg-gray-900 border border-orange-500/30
                       rounded-xl overflow-hidden shadow-lg
-                      min-w-[180px] z-50
+                      min-w-[180px] z-[100]
                     "
                   >
                     <a
