@@ -149,7 +149,7 @@ const Hero = () => {
                       left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0
                       bg-gray-900 border border-orange-500/30
                       rounded-xl overflow-hidden shadow-lg
-                      min-w-[180px] z-[100]
+                      min-w-[220px] z-[100]
                     "
                   >
                     <a
@@ -158,7 +158,7 @@ const Hero = () => {
                       className="
                         block px-4 py-3 text-sm text-gray-300
                         hover:bg-orange-500/20 hover:text-orange-500
-                        transition border-b border-gray-700
+                        transition border-b border-gray-700 whitespace-nowrap
                       "
                     >
                       📄 Frontend Resume
@@ -169,7 +169,7 @@ const Hero = () => {
                       className="
                         block px-4 py-3 text-sm text-gray-300
                         hover:bg-orange-500/20 hover:text-orange-500
-                        transition border-b border-gray-700
+                        transition border-b border-gray-700 whitespace-nowrap
                       "
                     >
                       📄 Backend Resume
@@ -180,7 +180,7 @@ const Hero = () => {
                       className="
                         block px-4 py-3 text-sm text-gray-300
                         hover:bg-orange-500/20 hover:text-orange-500
-                        transition
+                        transition whitespace-nowrap
                       "
                     >
                       📄 Full Stack Resume
