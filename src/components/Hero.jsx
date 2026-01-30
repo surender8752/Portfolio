@@ -145,7 +145,8 @@ const Hero = () => {
                     exit={{ opacity: 0, y: -10, scale: 0.95 }}
                     transition={{ duration: 0.15 }}
                     className="
-                      absolute top-full mt-2 left-0
+                      absolute top-full mt-2 
+                      left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0
                       bg-gray-900 border border-orange-500/30
                       rounded-xl overflow-hidden shadow-lg
                       min-w-[180px] z-[100]
