@@ -201,7 +201,6 @@ const Hero = () => {
             w-[240px] sm:w-[300px] md:w-[360px] lg:w-[420px]
             cursor-pointer
             transition-transform duration-300
-            flex items-center justify-center
           "
         >
           {/* Glow */}
@@ -218,10 +217,11 @@ const Hero = () => {
             src="/hero-profile.png"
             alt="Surender Kumar"
             className="
-              relative w-full rounded-3xl
+              relative w-full h-full rounded-3xl
               border border-orange-500/35
               shadow-2xl
               brightness-105 contrast-110 saturate-110
+              object-cover block
             "
           />
         </div>
