@@ -152,16 +152,15 @@ const Hero = () => {
                     "
                   >
                     <a
-                      href="/sk_fronten_new.pdf"
-                      download="sk_fronten_new.pdf"
+                      href="/Surender_Kumar_Frontend.pdf"
+                      download="Surender_Kumar_Frontend.pdf"
                       className="
                         block px-4 py-3 text-sm text-gray-300
                         hover:bg-orange-500/20 hover:text-orange-500
                         transition border-b border-gray-700
                       "
                     >
-                      📄 Frontend
-                      Resume
+                      📄 Frontend Resume
                     </a>
                     <a
                       href="/surender_backend_resume.pdf"
