@@ -42,9 +42,9 @@ const Hero = () => {
     <section
       id="home"
       className="bg-black text-white
-                 pt-24 pb-16
-                 sm:pt-28 sm:pb-20
-                 md:pt-32 md:pb-24"
+                 pt-20 pb-20
+                 sm:pt-24 sm:pb-24
+                 md:pt-28 md:pb-28"
     >
       <div
         className="
@@ -208,7 +208,7 @@ const Hero = () => {
             className="
               absolute inset-0 rounded-3xl
               bg-orange-500 blur-[80px]
-              opacity-40
+              opacity-25
             "
           ></div>
 
@@ -218,7 +218,7 @@ const Hero = () => {
             alt="Surender Kumar"
             className="
               relative w-full rounded-3xl
-              border border-orange-500/50
+              border border-orange-500/35
               shadow-2xl
               brightness-105 contrast-110 saturate-110
             "
