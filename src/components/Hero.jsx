@@ -201,6 +201,7 @@ const Hero = () => {
             w-[240px] sm:w-[300px] md:w-[360px] lg:w-[420px]
             cursor-pointer
             transition-transform duration-300
+            flex items-center justify-center
           "
         >
           {/* Glow */}
